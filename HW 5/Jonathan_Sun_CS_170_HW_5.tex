@@ -1,0 +1,135 @@
+% Search for all the places that say "PUT SOMETHING HERE".
+
+\documentclass[11pt]{article}
+\usepackage{amsmath,textcomp,amssymb,graphicx,enumerate,hyperref,enumitem,mathtools,tikz-qtree,listings,tikz}
+\definecolor{light-gray}{gray}{0.85}
+\lstset{
+    numbers=left,
+    breaklines=true,
+    backgroundcolor=\color{light-gray},
+    tabsize=2,
+    basicstyle=\ttfamily,
+    literate={\ \ }{{\ }}1
+}
+
+\def\Name{Jonathan Sun}  % Your name
+\def\SID{25020651}  % Your student ID number
+\def\Homework{5} % Number of Homework
+\def\Session{Fall 2017}
+
+
+\title{CS170 --- \Session --- Homework \Homework \space Solutions}
+\author{\Name, SID \SID}
+\markboth{CS170 --- \Session --- Homework \Homework \space --- \Name}{CS170 --- \Session --- Homework \Homework --- \Name}
+\pagestyle{myheadings}
+\date{}
+
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof:}}{\endproofmark\smallskip}
+\newenvironment{FourPartSolution}{\par{\bf Four-Part Solution:}}{\smallskip}
+\newenvironment{mainIdea}{{\bf Main Idea:}}{\smallskip}
+\newenvironment{pseudocode}{\par{\bf Pseudocode:}}{\smallskip}
+\newenvironment{proofOfCorrectness}{\par{\bf Proof of Correctness:}}{\endproofmark\smallskip}
+\newenvironment{runTime}{{\bf Run Time:}}{\smallskip}
+\newenvironment{justification}{\par{\bf Justification:}}{\smallskip}
+% \newenvironment{proofOfCorrectness}{\par{\bf Proof of Correctness:}}{\endproofmark\smallskip}
+% \newenvironment{runTime}{\par{\bf Run Time:}}{\smallskip}
+% \newenvironment{justification}{\par{\bf Justification:}}{\smallskip}
+
+\usepackage[margin=1in]{geometry}
+
+
+
+\begin{document}
+\maketitle
+
+\section*{0. Who Did You Work With?}
+
+Collaborators: Kevin Vo, Aleem Zaki, Jeremy Ou
+
+
+
+\newpage
+\section*{1. Scheduling Homeworks}
+\begin{enumerate}[label=(\alph*)]
+\item
+
+
+\item
+
+
+\item
+
+
+\end{enumerate}
+
+
+\newpage
+\section*{2.  Graph Coloring}
+\begin{enumerate}[label=(\alph*)]
+\item
+Following the hint, allow $p(G):G\mapsto\mathbb{N}_0$ to denote the potential of a graph $G$. Let this potential be explicitly defined as the number of edges in $E$ that have the same color vertex on either end (same-color edges), which by definition always takes on a value $\in \mathbb{N}_0$. Each time that the loop runs, a vertex $v\in B$ is changed from one color to the other.  $\forall v \in B$ there are $\geq 85$ vertices adjacent to $v$ and of the same color, and there are at most $85$ vertices adjacent to $v$ of the opposite color. This shows that even with the maximal number of non-similar and minimal similar adjacent vertices there is still a decrease in the number of same-color edges  by at least one (namely, one of the edges with $v$ as an end) when you switch the color of $v$. Thus, each iteration of the loop leads to a decrease of the value of $p(G)$ by at least one.
+
+\item
+
+
+\end{enumerate}
+
+
+
+\newpage
+\section*{3. 170-Graph}
+\begin{mainIdea}
+\\
+ok
+\end{mainIdea}
+\\
+\begin{runTime}
+\\
+ok
+\end{runTime}
+
+
+
+\newpage
+\section*{4. Weighted Set Cover}
+
+
+
+
+
+\newpage
+\section*{5. Quaternary Huffman}
+\begin{mainIdea}
+\\
+ok
+\end{mainIdea}
+\\
+\begin{proofOfCorrectness}
+\\
+ok
+\end{proofOfCorrectness}
+
+
+
+\newpage
+\section*{6. Simple and Naive Cluster Analysis}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
