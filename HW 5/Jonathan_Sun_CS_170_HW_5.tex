@@ -115,22 +115,41 @@ To prove that the algorithm will achieve the maximum possible compression, I wil
 
 \newpage
 \section*{6. Simple and Naive Cluster Analysis}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\begin{FourPartSolution}
+\\
+\begin{mainIdea}
+\\
+The main idea is to have two sets and to focus on the dissimilar messages although it can also be done with the similar messages. As we go though the messages, we check if the message that we are on has any dissimilarities with any other messages in either sets. Then we will put that message into the set with the fewest dissimilarities. If there are no dissimilarities in either sets for that message, then we can arbitrarily put it into either set.
+\end{mainIdea}
+\\
+\begin{pseudocode}
+\begin{lstlisting}
+clusterAnalysis(List of messages):
+	set1 = set()
+	set2 = set()
+	for each message:
+		if message has fewer dissimilarities in set1 than set2:
+			set1.add(message)
+		if message has more dissimilarities in set1 than set2:
+			set2.add(message)
+		else:
+			add message to either sets
+	return set1 and set2
+\end{lstlisting}
+\end{pseudocode}
+\begin{proofOfCorrectness}
+\\
+The pseudocode works because it is just a simple algorithm that checks if a message has fewer similarities in one set over the other and assigning it to the set that has fewer similarities. This will end up checking if there are any dissimilarities of the node that we are on with those that came before it. This essentially means that we will split the number of dissimilar edges in half because we are separating them. This will separate the pairs of dissimilar messages quickly in a simple way.
+\end{proofOfCorrectness}
+\\
+\begin{runTime}
+\\
+$O(n ^ 2)$.
+\end{runTime}
+\\
+\begin{justification}
+\\
+The runtime is $O(n ^ 2)$ because in each iteration of the algorithm, the number of checks needed is proportional to the iteration number. This means that the number of checks being done is equivalent to $1 + 2 + 3 + ... + n$. This can be represented by the arithmetic sum, $\sum_{n = 1}^{n} n = \frac{1} {2} n (n + 1)$. This converges to $O(n ^ 2)$ runtime.
+\end{justification}
+\end{FourPartSolution}
 \end{document}
