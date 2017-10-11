@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1507281898 "Jonathan_Sun_CS_170_HW_5.tex" "Jonathan_Sun_CS_170_HW_5.pdf" "Jonathan_Sun_CS_170_HW_5" 1507281898
+["pdflatex"] 1507748586 "Jonathan_Sun_CS_170_HW_5.tex" "Jonathan_Sun_CS_170_HW_5.pdf" "Jonathan_Sun_CS_170_HW_5" 1507748587
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1480098698 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -32,8 +32,8 @@
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1480098733 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb" 1480098733 35022 e40946b20bfdcd1099eafb2bcd9f25dd ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1480098733 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1480098733 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1480098733 31764 459c573c03a4949a528c2cc7f557e217 ""
-  "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1480098734 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1480098806 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1480098815 1458 43ab4710dc82f3edeabecd0d099626b2 ""
   "/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty" 1480098815 8237 3b62ef1f7e2c23a328c814b3893bc11f ""
@@ -155,9 +155,9 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1495593487 4129592 0e6cfee100d68e6d96b92c0258f2ff73 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "Jonathan_Sun_CS_170_HW_5.aux" 1507281898 662 b2b94621371df8d9296b8bf5bec1b851 ""
-  "Jonathan_Sun_CS_170_HW_5.out" 1507281898 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "Jonathan_Sun_CS_170_HW_5.tex" 1507281897 3190 000addf7b6801e00e9b87481119b0d0d ""
+  "Jonathan_Sun_CS_170_HW_5.aux" 1507748587 662 b2b94621371df8d9296b8bf5bec1b851 ""
+  "Jonathan_Sun_CS_170_HW_5.out" 1507748587 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "Jonathan_Sun_CS_170_HW_5.tex" 1507748586 8162 6f8f39d2826aa1e6674245ceb6e501c3 ""
   (generated)
   "Jonathan_Sun_CS_170_HW_5.aux"
   "Jonathan_Sun_CS_170_HW_5.log"

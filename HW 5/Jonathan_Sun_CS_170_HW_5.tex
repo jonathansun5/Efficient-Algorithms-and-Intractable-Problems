@@ -27,10 +27,10 @@
 \def\endproofmark{$\Box$}
 \newenvironment{proof}{\par{\bf Proof:}}{\endproofmark\smallskip}
 \newenvironment{FourPartSolution}{\par{\bf Four-Part Solution:}}{\smallskip}
-\newenvironment{mainIdea}{{\bf Main Idea:}}{\smallskip}
+\newenvironment{mainIdea}{\par{\bf Main Idea:}}{\smallskip}
 \newenvironment{pseudocode}{\par{\bf Pseudocode:}}{\smallskip}
 \newenvironment{proofOfCorrectness}{\par{\bf Proof of Correctness:}}{\endproofmark\smallskip}
-\newenvironment{runTime}{{\bf Run Time:}}{\smallskip}
+\newenvironment{runTime}{\par{\bf Run Time:}}{\smallskip}
 \newenvironment{justification}{\par{\bf Justification:}}{\smallskip}
 % \newenvironment{proofOfCorrectness}{\par{\bf Proof of Correctness:}}{\endproofmark\smallskip}
 % \newenvironment{runTime}{\par{\bf Run Time:}}{\smallskip}
@@ -53,13 +53,14 @@ Collaborators: Kevin Vo, Aleem Zaki, Jeremy Ou
 \section*{1. Scheduling Homeworks}
 \begin{enumerate}[label=(\alph*)]
 \item
-
-
-\item
-
+It is incorrect because a counterexample is one homework assignment due in $1$ hour (worth one point) and two homework assignments due in $2$ hours (worth two points each). If we consider the one whose deadline is the earliest and schedule it at the earliest available time, then we will only get the assignment due in $1$ hour done and one of the assignments due in $2$ hours done. This gives us $3$ points. However, we could have gotten $4$ points if we did both assignments due in $2$ hours.
 
 \item
+It is incorrect because a counterexample is one homework assignment due in $1$ hour (worth one point) and one homework assignments due in $2$ hours (worth two points). If we consider the one whose points is the highest and schedule it at the earliest available time, then we will only get the assignment due in $2$ hours done. This gives us $2$ points. However, we could have gotten $3$ points if we did the assignment due in $1$ hour first before doing the assignment due in $2$ hours.
 
+\item
+This greedy algorithm is correct because we want to minimize the number of "gaps"
+of time spent not doing homework. When using this algorithm, the student will still be able to do the homework assignments worth the most points before their respected deadlines at each time frame. This will also solve the problem in part (b) where there can be "gaps" of time spent wasted because you will still be packing in as many working hours as possible.
 
 \end{enumerate}
 
@@ -68,10 +69,10 @@ Collaborators: Kevin Vo, Aleem Zaki, Jeremy Ou
 \section*{2.  Graph Coloring}
 \begin{enumerate}[label=(\alph*)]
 \item
-Following the hint, allow $p(G):G\mapsto\mathbb{N}_0$ to denote the potential of a graph $G$. Let this potential be explicitly defined as the number of edges in $E$ that have the same color vertex on either end (same-color edges), which by definition always takes on a value $\in \mathbb{N}_0$. Each time that the loop runs, a vertex $v\in B$ is changed from one color to the other.  $\forall v \in B$ there are $\geq 85$ vertices adjacent to $v$ and of the same color, and there are at most $85$ vertices adjacent to $v$ of the opposite color. This shows that even with the maximal number of non-similar and minimal similar adjacent vertices there is still a decrease in the number of same-color edges  by at least one (namely, one of the edges with $v$ as an end) when you switch the color of $v$. Thus, each iteration of the loop leads to a decrease of the value of $p(G)$ by at least one.
+To show that this algorithm terminates in a finite number of steps, I will use an example. Imagine the worst case, which is where there is a red vertex with $85$ red vertex neighbors and $84$ blue vertex neighbors. This red vertex is considered a bad vertex because it has at least $85$ neighbors of its own color. After reversing the color, there are still $85$ red vertex neighbors and $84$ blue vertex neighbors. However, this vertex is a good vertex because it has less than $85$ neighbors of its own color. Therefore, this example shows that even in the worst case scenario, switching the color of a bad vertex will remove only $1$ bad vertex from $B$. In other words, you can remove $n$ bad vertices from $B$ where $n$ is the difference between the number of neighbors of its own color and number of neighbors of the the color. Therefore, each iteration of the loop leads to the decrease and so the algorithm will terminate when it reaches $0$.
 
 \item
-
+The algorithm will terminate after at most $|E|$ iterations of the loop because in each iteration of the loop, it will remove at least $1$ bad vertex, which also means $1$ bad edge. Therefore, the best case will have all the bad vertices removed in just one iteration. The worst case will have only $1$ bad vertex removed, which means $1$ edge at a time. This worst case will need all edges removed with $1$ removed in each iteration, meaning that there will be $|E|$ iterations needed.
 
 \end{enumerate}
 
@@ -81,12 +82,12 @@ Following the hint, allow $p(G):G\mapsto\mathbb{N}_0$ to denote the potential of
 \section*{3. 170-Graph}
 \begin{mainIdea}
 \\
-ok
+The main idea is that we use a modified version of DFS because DFS will end up checking all vertices as well as keeping track of the previsit and postvisit numbers. The previsit and postvisit numbers are important because we want to find the subgraph for $|V'|$ to be as large as possible. Therefore, if there are multiple subgraphs, then the subgraphs with the largest difference between the previsit and postvisit numbers for the "source" node will be the largest subgraph. For every node that we are on in the DFS, we will keep a counter to check if that node has at least $170$ neighbors. If so, then we keep track of that node, in a data structure that keeps track of which nodes are in our current subgraph. In the end, if we get multiple subgraphs, then I can just find the largest subgraph easily.
 \end{mainIdea}
 \\
 \begin{runTime}
 \\
-ok
+$O(|V||E| + |E| ^ 2)$. This is because we are just doing DFS, which has $O(|V| + |E|)$ runtime and checking if a node has at least $170$ neighbors, which is $O(|E|)$ time. Therefore, the runtime will be $O((|V| + |E|) |E|) = O(|V||E| + |E| ^ 2)$.
 \end{runTime}
 
 
@@ -102,12 +103,12 @@ ok
 \section*{5. Quaternary Huffman}
 \begin{mainIdea}
 \\
-ok
+The main idea is to modify Huffman's algorithm so that instead of working with a binary tree system, you work with a quarternary tree system. This would mean that a node can have up to $4$ children instead of the normal $2$ children. Therefore, the strategy to create the quarternary tree system will be the same strategy for the most part as the binary tree system for normal Huffman's algorithm. However, after creating the quartnary tree, we may need to rebalance the tree since we want to maximize the number of letters that can be represented with minimal bits.
 \end{mainIdea}
 \\
 \begin{proofOfCorrectness}
 \\
-ok
+To prove that the algorithm will achieve the maximum possible compression, I will use the proof for normal Huffman's algorithm provided in lecture (lemma that the two nodes with the lowest frequencies are at the greatest depth and lemma that nodes with the lowest frequencies are siblings in an optimal tree) to justify that ordinary Huffman's algorithm will achieve the maximum possible compression. So, I will just need to prove that my main idea will also achieve maximum possible compression. My algorithm idea is to work with a quarternary tree, which can represent up to $4$ values in one layer. So, my algorithm will maximize the use of this data structure by putting the least frequently used characters at the lowest layer of the quarternary tree and will prioritize character spots in upper layers for characters that are more frequently used. This alone will allow me to assign the most frequently used characters with shorter codewords than those used less frequently. Once this part is done, it is important for me to rebalance the tree since there may be unused branches above the characters in the lower layers. So, rebalancing the tree would mean that if a layer has not maximized its branches, then the algorithm will bubble up the most used characters that is below that layer. This way, the characters that get bubbled up will get to be able to reduce their encodings. 
 \end{proofOfCorrectness}
 
 
