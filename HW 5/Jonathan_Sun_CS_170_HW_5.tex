@@ -94,8 +94,10 @@ $O(|V||E| + |E| ^ 2)$. This is because we are just doing DFS, which has $O(|V| +
 
 \newpage
 \section*{4. Weighted Set Cover}
-
-
+\begin{proofOfCorrectness}
+\\
+To prove that if there is a solution with cost $k$ then the above algorithm will find a solution with cost $O(k \log{n})$, I let $k$ be the cost of optimal solution. From the idea above, at each iteration we have covered $i - 1$ elements before it, which means that the cost of the $i$th element is at most worth $k \times \frac{1} {n - (i - 1)}$. Since the $S_i$ that is picked in each iteration has the largest ratio, the cost of the $i$th element is at most $k \times \frac{1} {n - (i - 1)}$ and so the cost can be represented as $\sum_{i = 1}^{n} \frac{k} {n - i + 1} = k \times \left(\frac{1} {n} + ... + \frac{1} {2} + 1\right)$ and this is about $O(k \log{n})$ runtime.
+\end{proofOfCorrectness}
 
 
 
