@@ -72,20 +72,49 @@ The necessary and sufficient conditions on real numbers $a$ and $b$ that allow t
 \section*{2. TeaOne}
 \begin{enumerate}[label=(\alph*)]
 \item
-
+The cost of creating a ZestyJuice is $5 \times 0.1 + 1 \times 0.2 + 8 \times 0.01 = 0.78$. Since a ZestyJuice sells for $4.5$, the profit of selling one is $4.5 - 0.78 = 3.72$. The cost of creating a MilkTea is $12 \times 0.1 + 16 \times 0.2 = 4.4$. Since a MilkTea sells for $5$, the profit of selling one is $5 - 4.4 = 0.6$. With this, I will represent ZestyJuice as $z$ and MilkTea as $m$. The linear program will be:
+\begin{align*}
+\text{max } 3.72 z + 0.6 m
+\end{align*}
+\begin{align*}
+z \leq 60
+\end{align*}
+\begin{align*}
+m \leq 40
+\end{align*}
+\begin{align*}
+0.78 z + 4.4 m \leq b
+\end{align*}
+\begin{align*}
+z \geq 0 \text{, } m \geq 0
+\end{align*}
 
 
 
 \item
-
-
-
-
+\begin{align*}
+\text{min } 60 y_1 + 40 y_2 + 6 y_3
+\end{align*}
+\begin{align*}
+y_1 + 0.78 y_3 \geq 3.72
+\end{align*}
+\begin{align*}
+y_2 + 4.4 y_3 \geq 0.6
+\end{align*}
+\begin{align*}
+y_1 \geq 0 \text{, } y_2 \geq 0 \text{, } y_3 \geq 0
+\end{align*}
 \item
-
-
-
-
+There are three types of solutions for this part since we can have a budget that is so large that we can afford to make all $60$ ZestyJuice and $40$ MilkyTea, a limited budget so we maximize ZestyJuices since they make the most profit, and another limited budget where we maximize MilkyTea because they turn a profit.
+\begin{align*}
+z = \frac{b} {0.78} \text{, } m = 0 \text{ for } b < 46.8
+\end{align*}
+\begin{align*}
+z = 60 \text{, } m = \frac{b - 46.8} {4.4} \text{ for } 46.8 \leq b \leq 222.8
+\end{align*}
+\begin{align*}
+z = 60 \text{, } m = 40 \text{ for } b > 222.8
+\end{align*}
 \end{enumerate}
 
 
@@ -117,22 +146,46 @@ The necessary and sufficient conditions on real numbers $a$ and $b$ that allow t
 
 \newpage
 \section*{5. Star-shaped polygons in 2D}
-
+\vspace*{1\baselineskip}
+The idea for this problem is that the point $x$ will be able to see all the points of the polygon, which means that there can be a direct line between each point of the polygon to the point $x$ and none of these points will intersect or be the same equation as each other between each point of the polygon and $x$. In other words, the linear program needs to show whether there exists a point $x$ that is the intersection of all the lines that go from each point of the polygon to $x$. This can further "simplified" by having the linear program show whether there exists a point $x$ that is the intersection of all the lines that go from each CORNER of the polygon to $x$. \\
+\vspace*{1\baselineskip}
+Therefore, the linear program can be represented as:
+\begin{align*}
+\text{max } None
+\end{align*}
+\begin{align*}
+a_i x + b_i y > c_i \text{ where } i \in \{1, 2, ..., n - 1\}
+\end{align*}
 
 
 
 \newpage
 \section*{6. All Knight-er}
-
-
-
-
-
-
-
-
-
-
-
-
+\begin{FourPartSolution}
+\\
+\begin{mainIdea}
+\\
+ok
+\end{mainIdea}
+\\
+\begin{pseudocode}
+\begin{lstlisting}
+ok
+\end{lstlisting}
+\end{pseudocode}
+\begin{proofOfCorrectness}
+\\
+ok
+\end{proofOfCorrectness}
+\\
+\begin{runTime}
+\\
+ok
+\end{runTime}
+\\
+\begin{justification}
+\\
+ok
+\end{justification}
+\end{FourPartSolution}
 \end{document}
