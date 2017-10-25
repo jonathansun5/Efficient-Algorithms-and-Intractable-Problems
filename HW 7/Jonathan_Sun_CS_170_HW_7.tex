@@ -140,7 +140,53 @@ z = 60 \text{, } m = 40 \text{ for } b > 222.8
 
 \newpage
 \section*{4. The Hungry Caterpillar}
+\begin{FourPartSolution}
+\\
+\begin{mainIdea}
+\\
+The main idea to solve this is to use a graph traversal algorithm to get to $k$ distinct branch points. However, since it costs energy to travel from one branch to the next and we need to start and end at the same point, this means that the caterpillar will be forced to return back to the start point by expending more energy. Since the process of going back on a traversal just costs energy without allowing the caterpillar to eat, this should be avoided as much as possible, except when the caterpillar has to return back to start. Therefore, the caterpillar's path should try to traverse as far down as possible and try to avoid as many backwards movement as possible. To do this, there will be a penalty imposed on each backwards movement the algorithm takes to discourage the caterpillar from traversing backwards in general.
+\end{mainIdea}
+\\
+\begin{pseudocode}
+\begin{lstlisting}
+shortestPathsDFS(G, len, s, t):
+	dist(s) = 0
+	# initialize a priority queue starting from s and length of 0
+	Q = stack[(s, 0)]
+	maxCount = 0
+	count = 0
+	minStack = Null
+	while Q is not empty:
+		# u = path and v = dist
+		u, v = Q.pop()
+		if u = t:
+			# 1 + count because we popped one already
+			count += 1
+			if count > maxCount:
+				maxCount = count
+				minStack.add(node)
+			return 1 + count((t, v) left in the queue)
+		for edges(u, v) in E:
+			Q.add((v, val + len(u, v))
+	return minStack
 
+\end{lstlisting}
+\end{pseudocode}
+\begin{proofOfCorrectness}
+\\
+It should be correct because we are just modifying DFS but making it greedy by keeping a counter of the number of back traversals done to discourage the back traversals. 
+\end{proofOfCorrectness}
+\\
+\begin{runTime}
+\\
+$O(3n)$.
+\end{runTime}
+\\
+\begin{justification}
+\\
+The runtime is $O(3n)$ because the graph traversal will take $O(|V| + |E|)$ time. Since each vertex can either have $2$ branches or none, the number of edges will be equal to double the number of vertices. Since the number of vertices is $k$ and it is upper bounded by $n$, the number of vertices is upper bounded by $n$ and the number of edges is upper bounded by $2n$. Therefore, the runtime is $O(n + |E|) = O(n + |V - 1|) = O(n + 2|V|) = O(n + 2n) = O(3n)$.
+\end{justification}
+\end{FourPartSolution}
 
 
 

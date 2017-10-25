@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  25 OCT 2017 14:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  25 OCT 2017 15:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -852,46 +852,65 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
- [4] [5]
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 163--165
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 143--145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--170
+Underfull \hbox (badness 10000) in paragraph at lines 145--150
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--197
+Underfull \hbox (badness 10000) in paragraph at lines 175--180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--202
+Underfull \hbox (badness 10000) in paragraph at lines 180--185
 
  []
 
-[7] [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 207.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 207.
+[5] [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 209--211
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--216
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--243
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--248
+
+ []
+
+[8] [9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 253.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 253.
  (./Jonathan_Sun_CS_170_HW_7.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 207.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 207.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 253.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 253.
 Package rerunfilecheck Info: File `Jonathan_Sun_CS_170_HW_7.out' has not change
 d.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 207.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 253.
  ) 
 Here is how much of TeX's memory you used:
- 18866 strings out of 492995
- 345677 string characters out of 6132704
- 464741 words of memory out of 5000000
+ 18888 strings out of 492995
+ 345987 string characters out of 6132704
+ 469741 words of memory out of 5000000
  22060 multiletter control sequences out of 15000+600000
  11566 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,10n,56p,869b,919s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,10n,56p,869b,956s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -904,10 +923,10 @@ texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/tex
 live/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Jonathan_Sun_CS_170_HW_7.pdf (8 pages, 152798 bytes).
+Output written on Jonathan_Sun_CS_170_HW_7.pdf (9 pages, 159446 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
- 43 named destinations out of 1000 (max. 500000)
+ 167 PDF objects out of 1000 (max. 8388607)
+ 142 compressed objects within 2 object streams
+ 65 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
