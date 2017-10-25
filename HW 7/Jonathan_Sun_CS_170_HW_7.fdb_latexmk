@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1508963401 "Jonathan_Sun_CS_170_HW_7.tex" "Jonathan_Sun_CS_170_HW_7.pdf" "Jonathan_Sun_CS_170_HW_7" 1508963402
+["pdflatex"] 1508967883 "Jonathan_Sun_CS_170_HW_7.tex" "Jonathan_Sun_CS_170_HW_7.pdf" "Jonathan_Sun_CS_170_HW_7" 1508967927
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1480098698 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -157,11 +157,11 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1495593487 4129592 0e6cfee100d68e6d96b92c0258f2ff73 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "Jonathan_Sun_CS_170_HW_7.aux" 1508963402 662 b2b94621371df8d9296b8bf5bec1b851 ""
-  "Jonathan_Sun_CS_170_HW_7.out" 1508963401 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "Jonathan_Sun_CS_170_HW_7.tex" 1508963400 6463 2802d0e7d5b6f7c7ba9f23d48ce184fe ""
+  "Jonathan_Sun_CS_170_HW_7.aux" 1508967883 662 b2b94621371df8d9296b8bf5bec1b851 ""
+  "Jonathan_Sun_CS_170_HW_7.out" 1508967883 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "Jonathan_Sun_CS_170_HW_7.tex" 1508967926 8764 9d0562026c80aed1662d0986f40e63a9 ""
   (generated)
   "Jonathan_Sun_CS_170_HW_7.pdf"
-  "Jonathan_Sun_CS_170_HW_7.out"
   "Jonathan_Sun_CS_170_HW_7.aux"
+  "Jonathan_Sun_CS_170_HW_7.out"
   "Jonathan_Sun_CS_170_HW_7.log"

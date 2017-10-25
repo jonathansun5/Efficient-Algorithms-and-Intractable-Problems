@@ -146,7 +146,6 @@ z = 60 \text{, } m = 40 \text{ for } b > 222.8
 
 \newpage
 \section*{5. Star-shaped polygons in 2D}
-\vspace*{1\baselineskip}
 The idea for this problem is that the point $x$ will be able to see all the points of the polygon, which means that there can be a direct line between each point of the polygon to the point $x$ and none of these points will intersect or be the same equation as each other between each point of the polygon and $x$. In other words, the linear program needs to show whether there exists a point $x$ that is the intersection of all the lines that go from each point of the polygon to $x$. This can further "simplified" by having the linear program show whether there exists a point $x$ that is the intersection of all the lines that go from each CORNER of the polygon to $x$. \\
 \vspace*{1\baselineskip}
 Therefore, the linear program can be represented as:
@@ -165,27 +164,44 @@ a_i x + b_i y > c_i \text{ where } i \in \{1, 2, ..., n - 1\}
 \\
 \begin{mainIdea}
 \\
-ok
+The main idea is that a knight can only attack in a "L" shape where it needs to move $2$ spaces on one axis and $1$ space on another axis. So, the idea is that the subproblems will be to find the number of ways we can add more knights given the previous row and the one before that since all the other rows before those two rows will not affect the next row since we just need to care about the previous $2$ rows.
 \end{mainIdea}
 \\
 \begin{pseudocode}
 \begin{lstlisting}
-ok
+function AllKnighter(M, N):
+	state1 = none
+	state2 = none
+	count = 0
+	for all M's:
+		if positionSoFar == 2:
+			count += 1
+			# only one way to put knight when increasing the column size by 2
+			return AllKnighterActual(1, 2, state1, state2)
+
+	function AllKnighterActual(sum, positionSoFar, state1, state2):
+		while positionSoFar < N:
+			for all M's:
+				AllKnighterActual(sum, positionSoFar, state0, state1).sum += AllKnighterActual(sum, positionSoFar - 1, state2, state3).sum
+				count += AllKnighterActual(sum, positionSoFar, state0, state1).sum
+		return AllKnighterActual(sum, positionSoFar, state0, state1)
+
+	return count
 \end{lstlisting}
 \end{pseudocode}
 \begin{proofOfCorrectness}
 \\
-ok
+To show that the idea for the pseudocode is correct, I will start with the base case, which is also my first conditional in the for-loop for AllKnighter. This part means that for every size of $M$, I will increase the count by $1$ because in a $M$ by $N$ board, every $M$ by $2$ has $1$ new valid knight placement assuming that the previous two rows had valid placements since the $2$ previous rows limit the new placements that can be be made at the next row. Therefore, to use this idea, I need to be able to keep the previous $2$ row's information (which I call state1 and state2) as I am considering the number of possible placements for the new state. Doing so means that for every new row that I look at, I will count the number of possible knight placements in that row and add it to the sum I got when working on the previous row.
 \end{proofOfCorrectness}
 \\
 \begin{runTime}
 \\
-ok
+$O(2^{3M} N)$.
 \end{runTime}
 \\
 \begin{justification}
 \\
-ok
+The runtime is $O(2^{3M} N)$ because the number of times I call AllKnighterActual is $2^{2M} N$ times since the $2M$ comes from the $2$ recursive calls for all $M$ in the for loop of all $M$. Since the while loop has $N$ iterations, there are $2^{2M} N$ subproblems. However, there is also time to compute each occurance of $M$ in the outer function, which takes $2^M$ time. Therefore, the total runtime is $O(2^{2M} N \times 2^M) = O(2^{3M} N)$.
 \end{justification}
 \end{FourPartSolution}
 \end{document}
