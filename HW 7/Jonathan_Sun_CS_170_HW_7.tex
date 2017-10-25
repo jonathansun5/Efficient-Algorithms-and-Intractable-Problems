@@ -1,0 +1,138 @@
+% Search for all the places that say "PUT SOMETHING HERE".
+
+\documentclass[11pt]{article}
+\usepackage{amsmath,textcomp,amssymb,graphicx,enumerate,hyperref,enumitem,mathtools,tikz-qtree,listings,tikz}
+\definecolor{light-gray}{gray}{0.85}
+\lstset{
+    numbers=left,
+    breaklines=true,
+    backgroundcolor=\color{light-gray},
+    tabsize=2,
+    basicstyle=\ttfamily,
+    literate={\ \ }{{\ }}1
+}
+
+\def\Name{Jonathan Sun}  % Your name
+\def\SID{25020651}  % Your student ID number
+\def\Homework{7} % Number of Homework
+\def\Session{Fall 2017}
+
+
+\title{CS170 --- \Session --- Homework \Homework \space Solutions}
+\author{\Name, SID \SID}
+\markboth{CS170 --- \Session --- Homework \Homework \space --- \Name}{CS170 --- \Session --- Homework \Homework --- \Name}
+\pagestyle{myheadings}
+\date{}
+
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof:}}{\endproofmark\smallskip}
+\newenvironment{FourPartSolution}{\par{\bf Four-Part Solution:}}{\smallskip}
+\newenvironment{mainIdea}{\par{\bf Main Idea:}}{\smallskip}
+\newenvironment{pseudocode}{\par{\bf Pseudocode:}}{\smallskip}
+\newenvironment{proofOfCorrectness}{\par{\bf Proof of Correctness:}}{\endproofmark\smallskip}
+\newenvironment{runTime}{\par{\bf Run Time:}}{\smallskip}
+\newenvironment{justification}{\par{\bf Justification:}}{\smallskip}
+% \newenvironment{proofOfCorrectness}{\par{\bf Proof of Correctness:}}{\endproofmark\smallskip}
+% \newenvironment{runTime}{\par{\bf Run Time:}}{\smallskip}
+% \newenvironment{justification}{\par{\bf Justification:}}{\smallskip}
+
+\usepackage[margin=1in]{geometry}
+
+
+
+\begin{document}
+\maketitle
+
+\section*{0. Who Did You Work With?}
+
+Collaborators: Kevin Vo, Aleem Zaki, Jeremy Ou
+
+
+
+\newpage
+\section*{1. A HeLPful Introduction}
+\begin{enumerate}[label=(\alph*)]
+\item
+The necessary and sufficient conditions on real numbers $a$ and $b$ that make the linear program infeasible do not exist. This is because no matter what $a$ and $b$ are, $x$ and $y$ can both equal $0$ and this will always satisfy the constraints.
+
+
+
+\item
+The necessary and sufficient conditions on real numbers $a$ and $b$ that make the linear program unbounded are if $a < 0$ or $b < 0$. This is because the conditions to maximize $x + y$ and $ax + by \leq 1$ with either $a < 0$ or $b < 0$ would make the region's area infinite. In other words, if the slope of the line for $ax + by \leq 1$ is positive, then there is no maximum for either $x$ or $y$ making the region's area infinite. If the slope of the line is negative, then both $x$ and $y$ will have individual maximum values and so $x + y$ will be bounded. Therefore, the to make the linear program unbounded, either $a$ or $b$ will need to be less than zero to make the slope positive.
+
+
+
+\item
+The necessary and sufficient conditions on real numbers $a$ and $b$ that allow the linear program to have a unique optimal solution are that $a > 0$, $b > 0$, and $a \neq b$. This allows for the slope of the line for $ax + by \leq 1$ to be negative, which will give individual maximum bounds to both $x$ and $y$. Furthermore, $a \leq b$ makes the slope not equal to $-1$, which would cause the maximum value of $x$ to equal the maximum value of $y$. This would give multiple solutions since $max x + y$ would all be the same value if the slope is $-1$. Therefore, we need the slope to be negative and also not equal to $-1$.
+\end{enumerate}
+
+
+
+\newpage
+\section*{2. TeaOne}
+\begin{enumerate}[label=(\alph*)]
+\item
+
+
+
+
+\item
+
+
+
+
+\item
+
+
+
+
+\end{enumerate}
+
+
+
+\newpage
+\section*{3. Mountain pass}
+\begin{enumerate}[label=(\alph*)]
+\item
+
+
+
+
+\item
+
+
+
+
+
+
+\end{enumerate}
+
+
+
+\newpage
+\section*{4. The Hungry Caterpillar}
+
+
+
+
+\newpage
+\section*{5. Star-shaped polygons in 2D}
+
+
+
+
+\newpage
+\section*{6. All Knight-er}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
